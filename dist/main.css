@@ -102,6 +102,8 @@ footer {
 
   .image-container {
     min-width: 50%;
+    height: 80%;
+    margin-right: 2rem;
   }
 
   footer {
