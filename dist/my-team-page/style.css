@@ -50,24 +50,21 @@ header > h1 {
   display: grid;
   flex-grow: 1;
   grid-template-columns: repeat(3, [col-start] auto);
-  grid-template-rows: repeat(2, [row-start] 450px);
-  column-gap: 2.5em;
-  row-gap: 2em;
+  gap: 2em 2.5em;
   margin-top: 5em;
 }
 
 .profile {
   display: flex;
-  /* justify-self: center; */
 }
 
 .profiles > .profile:nth-child(3n + 2) {
-  align-self: end;
+  padding-top: 7em;
 }
 
 .profile-personal__picture {
-  width: auto;
-  max-height: 300px;
+  width: 100%;
+  height: auto;
 }
 
 .profile-personal__name {
@@ -101,23 +98,12 @@ footer > a {
 
 @media (max-width: 800px) {
   .profiles {
-    grid-template-rows: repeat(2, [row-start] 300px);
-    column-gap: 1em;
-    row-gap: 1em;
-  }
-
-  .profile-personal__picture {
-    width: auto;
-    max-height: 200px;
+    gap: 1em;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
-  /* .container {
-    align-items: center;
-  } */
-
   .container {
     margin: 0 1em;
     margin-top: 0.6em;
@@ -138,20 +124,14 @@ footer > a {
 
   .profiles {
     grid-template-columns: repeat(2, [col-start] auto);
-    grid-template-rows: repeat(3, [row-start] 450px);
   }
 
   .profiles > .profile:nth-child(odd) {
-    align-self: start;
-  }
-
-  .profile-personal__picture {
-    width: auto;
-    max-height: 300px;
+    padding-top: 0;
   }
 
   .profiles > .profile:nth-child(even) {
-    align-self: end;
+    padding-top: 5em;
   }
 }
 
@@ -160,31 +140,11 @@ footer > a {
     font-size: 0.7em;
   }
 
-  .profiles {
-    grid-template-rows: repeat(3, [row-start] 300px);
-  }
-
   .profile-personal__name {
     font-size: x-small;
   }
 
-  .profile-personal__picture {
-    width: auto;
-    max-height: 180px;
-  }
-
   .profile-title {
     font-size: x-small;
-  }
-}
-
-@media (max-width: 400px) {
-  .profiles {
-    grid-template-rows: repeat(3, [row-start] 220px);
-  }
-
-  .profile-personal__picture {
-    width: auto;
-    max-height: 140px;
   }
 }
