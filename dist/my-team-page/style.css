@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto;
+  /* margin-top: 25px; */
+  max-width: 900px;
+  height: 100%;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1em;
+  min-width: 275px;
+}
+
+header > h1 {
+  font-family: 'PT Serif', serif;
+}
+
+.statement {
+  font-family: 'Poppins', sans-serif;
+  width: 318px;
+}
+
+.statement > h2 {
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.profiles {
+  display: grid;
+  flex-grow: 1;
+  grid-template-columns: repeat(3, [col-start] auto);
+  grid-template-rows: repeat(2, [row-start] 450px);
+  column-gap: 1em;
+  row-gap: 1em;
+  margin-top: 5em;
+}
+
+.profile {
+  display: flex;
+  /* justify-self: center; */
+}
+
+.profile-center {
+  align-self: end;
+}
+
+.profile-personal__picture {
+  /* width: 180px; */
+  width: auto;
+  max-height: 300px;
+  /* max-height: 100%; */
+}
+
+.profile-personal__name {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 0.2em;
+}
+
+.profile-title {
+  font-family: 'PT Serif', serif;
+  font-size: 12px;
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  margin-left: 0.3em;
+}
+
+footer {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 7em;
+  margin-bottom: 2em;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: auto;
+    margin-top: 17px;
+  }
+
+  header > h1 {
+    margin-bottom: 0;
+  }
+
+  .statement > p {
+    margin-top: 0;
+  }
+}
