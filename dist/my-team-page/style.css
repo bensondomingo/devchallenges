@@ -12,7 +12,6 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  /* margin: auto 2em; */
   height: 100%;
 }
 
@@ -21,6 +20,8 @@ body {
   flex-direction: column;
   max-width: 900px;
   height: 100%;
+  margin: 0 2em;
+  margin-top: 3em;
 }
 
 header {
@@ -60,8 +61,7 @@ header > h1 {
   /* justify-self: center; */
 }
 
-.profiles > .profile:nth-child(2),
-.profiles > .profile:nth-child(5) {
+.profiles > .profile:nth-child(3n + 2) {
   align-self: end;
 }
 
@@ -90,7 +90,7 @@ footer {
   font-style: normal;
   font-size: 14px;
   text-align: center;
-  margin-top: 7em;
+  margin-top: 5em;
   margin-bottom: 2em;
 }
 
@@ -99,22 +99,92 @@ footer > a {
   text-decoration: none;
 }
 
-/* Mobile */
 @media (max-width: 800px) {
+  .profiles {
+    grid-template-rows: repeat(2, [row-start] 300px);
+  }
+
+  .profile-personal__picture {
+    width: auto;
+    max-height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
   /* .container {
     align-items: center;
   } */
+
+  .container {
+    margin: 0 1em;
+    margin-top: 0.6em;
+  }
 
   header {
     grid-template-columns: auto;
     grid-template-rows: auto auto;
   }
 
-  /* header > h1 {
-    margin-bottom: 0;
+  header > h1 {
+    margin: 0;
   }
 
-  .statement > p {
-    margin-top: 0;
-  } */
+  .statement {
+    width: 250px;
+  }
+
+  .profiles {
+    grid-template-columns: repeat(2, [col-start] auto);
+    grid-template-rows: repeat(3, [row-start] 450px);
+  }
+
+  .profiles > .profile:nth-child(odd) {
+    align-self: start;
+  }
+
+  .profile-personal__picture {
+    width: auto;
+    max-height: 300px;
+  }
+
+  .profiles > .profile:nth-child(even) {
+    align-self: end;
+  }
 }
+
+@media (max-width: 500px) {
+  .statement {
+    font-size: 0.7em;
+  }
+
+  .profiles {
+    grid-template-rows: repeat(3, [row-start] 300px);
+  }
+
+  .profile-personal__name {
+    font-size: x-small;
+  }
+
+  .profile-personal__picture {
+    width: auto;
+    max-height: 180px;
+  }
+
+  .profile-title {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .profiles {
+    grid-template-rows: repeat(3, [row-start] 220px);
+  }
+
+  .profile-personal__picture {
+    width: auto;
+    max-height: 140px;
+  }
+}
+
