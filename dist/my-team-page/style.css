@@ -7,15 +7,18 @@ html {
 }
 
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
+  /* margin: auto 2em; */
+  height: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  margin: auto auto;
-  /* margin-top: 25px; */
   max-width: 900px;
   height: 100%;
 }
@@ -24,7 +27,6 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 1em;
-  min-width: 275px;
 }
 
 header > h1 {
@@ -58,15 +60,14 @@ header > h1 {
   /* justify-self: center; */
 }
 
-.profile-center {
+.profiles > .profile:nth-child(2),
+.profiles > .profile:nth-child(5) {
   align-self: end;
 }
 
 .profile-personal__picture {
-  /* width: 180px; */
   width: auto;
   max-height: 300px;
-  /* max-height: 100%; */
 }
 
 .profile-personal__name {
@@ -93,18 +94,27 @@ footer {
   margin-bottom: 2em;
 }
 
+footer > a {
+  color: inherit;
+  text-decoration: none;
+}
+
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 800px) {
+  /* .container {
+    align-items: center;
+  } */
+
   header {
     grid-template-columns: auto;
-    margin-top: 17px;
+    grid-template-rows: auto auto;
   }
 
-  header > h1 {
+  /* header > h1 {
     margin-bottom: 0;
   }
 
   .statement > p {
     margin-top: 0;
-  }
+  } */
 }
