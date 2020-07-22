@@ -51,8 +51,8 @@ header > h1 {
   flex-grow: 1;
   grid-template-columns: repeat(3, [col-start] auto);
   grid-template-rows: repeat(2, [row-start] 450px);
-  column-gap: 1em;
-  row-gap: 1em;
+  column-gap: 2.5em;
+  row-gap: 2em;
   margin-top: 5em;
 }
 
@@ -102,6 +102,8 @@ footer > a {
 @media (max-width: 800px) {
   .profiles {
     grid-template-rows: repeat(2, [row-start] 300px);
+    column-gap: 1em;
+    row-gap: 1em;
   }
 
   .profile-personal__picture {
@@ -177,7 +179,6 @@ footer > a {
 }
 
 @media (max-width: 400px) {
-
   .profiles {
     grid-template-rows: repeat(3, [row-start] 220px);
   }
@@ -187,4 +188,3 @@ footer > a {
     max-height: 140px;
   }
 }
-
